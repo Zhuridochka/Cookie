@@ -14,7 +14,7 @@
 			overflow: auto;
 			padding: toRem(105) toRem(15) toRem(15) toRem(30);
 			transition: left 0.3s;
-			background-color: $bgLinierGradientPink; //*Змінити колір можлива
+			background: $bgLightPink; //*Змінити колір можлива
 
 			&::before {
 				content: "";

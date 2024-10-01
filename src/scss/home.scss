@@ -1,3 +1,131 @@
 //====================================================================================================
+.page {
+
+  // .page__hero
+  &__hero {}
+}
 
 //====================================================================================================
+.hero {
+  background: $bgLinierGradientPink;
+
+  // .hero__content
+  &__content {
+    display: flex;
+
+    @media (max-width:$mobile) {
+      flex-direction: column-reverse;
+      row-gap: toRem(24);
+    }
+  }
+
+  // .hero__image-bg
+  &__image-bg {
+    inline-size: toRem(700);
+    flex-basis: toRem(700);
+    flex-shrink: 1;
+    aspect-ratio: 1;
+    overflow: hidden;
+
+    @media (max-width:$mobile) {
+      inline-size: toRem(560);
+      flex-basis: toRem(560);
+    }
+
+    @media (max-width:$mobileSmall) {
+      inline-size: toRem(400);
+      flex-basis: toRem(400);
+    }
+
+    @media (max-width: toEm(360)) {
+      inline-size: toRem(320);
+      flex-basis: toRem(320);
+    }
+  }
+
+  // .hero__image
+  &__image {
+    inline-size: 100%;
+    object-fit: cover;
+    flex-shrink: 1;
+
+    // @media (max-width:$mobile) {
+    //   inline-size: 80%;
+    // }
+  }
+
+  // .hero__info
+  &__info {
+    max-inline-size: toRem(407);
+    padding-block-start: toRem(213);
+    padding-block-end: toRem(227);
+    padding-inline-end: toRem(15);
+    @include adaptiveValue("padding-block-start", 213, 100, 0, 1466, 768);
+    @include adaptiveValue("padding-block-end", 227, 114, 0, 1466, 768);
+
+    @media (max-width:$mobile) {
+      max-inline-size: toRem(422);
+      align-self: center;
+      padding-block-end: toRem(0);
+      padding-inline-start: toRem(15);
+    }
+
+    @media (max-width:$mobileSmall) {
+      padding-block-start: toRem(80);
+    }
+  }
+
+  // .hero__sub-title
+  &__sub-title {
+    font-family: 'Lena', serif;
+    font-size: toRem(20);
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(58);
+    }
+
+    @media (max-width:$mobile) {
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-block-end: toRem(53);
+      }
+    }
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(18);
+
+      &:not(:last-child) {
+        margin-block-end: toRem(40);
+      }
+    }
+  }
+
+  // .hero__title
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: toRem(48);
+    }
+
+    @media (max-width:$mobile) {
+      text-align: center;
+      font-size: toRem(40);
+    }
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(35);
+
+      &:not(:last-child) {
+        margin-block-end: toRem(5);
+      }
+    }
+  }
+
+  // .hero__button
+  &__button {
+    @media (max-width:$mobileSmall) {
+      display: none;
+    }
+  }
+}
