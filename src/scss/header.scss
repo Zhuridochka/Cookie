@@ -1,0 +1,60 @@
+.header {
+  background-color: $whiteColor;
+
+  // .header__container
+  &__container {
+    padding-block: toRem(21);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(60);
+
+    @media (max-width:$mobile) {
+      padding-block: toRem(15);
+    }
+  }
+
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 5;
+    inline-size: toRem(180);
+    aspect-ratio: 180 / 52;
+    flex-shrink: 0;
+
+    @media (max-width:$mobile) {
+      inline-size: toRem(150);
+    }
+
+    img {
+      inline-size: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .header__menu
+  &__menu {}
+}
+
+.menu {
+
+  // .menu__body
+
+  &__body {}
+
+  // .menu__list
+
+  &__list {}
+
+  // .menu__item
+
+  &__item {}
+
+  // .menu__link
+
+  &__link {}
+
+  // .menu__icon
+
+  &__icon {}
+}

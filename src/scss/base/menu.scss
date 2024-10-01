@@ -1,7 +1,8 @@
 .menu {
+
 	// .menu__icon
-	&__icon {
-	}
+	&__icon {}
+
 	// .menu__body
 	&__body {
 		@media (max-width: $mobile) {
@@ -11,37 +12,63 @@
 			left: -100%;
 			top: 0;
 			overflow: auto;
-			padding: toRem(50) toRem(15) toRem(15) toRem(30);
+			padding: toRem(105) toRem(15) toRem(15) toRem(30);
 			transition: left 0.3s;
+			background-color: $bgLinierGradientPink; //*Змінити колір можлива
+
 			&::before {
 				content: "";
 				position: fixed;
 				width: 100%;
-				height: toRem(70);
+				height: toRem(74);
 				left: -100%;
 				top: 0;
 				transition: left 0.3s;
 				z-index: 2;
+				background-color: $whiteColor;
 			}
+
 			.menu-open & {
 				left: 0;
+
 				&::before {
 					left: 0;
 				}
 			}
 		}
 	}
+
 	// .menu__list
 	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		column-gap: toRem(60);
+		row-gap: toRem(15);
+
+		@media (max-width:$tablet) {
+			column-gap: toRem(40);
+		}
+
+		@media (max-width: toEm(880)) {
+			column-gap: toRem(30);
+		}
+
 		@media (max-width: $mobile) {
+			flex-direction: column;
 		}
 	}
+
 	// .menu__item
-	&__item {
-	}
+	&__item {}
+
 	// .menu__link
 	&__link {
+		font-size: toRem(20);
+
 		@media (max-width: $mobile) {
+			font-size: toRem(24);
 		}
 	}
 }
@@ -49,15 +76,18 @@
 //Burger Icon
 .icon-menu {
 	display: none;
+
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
 		width: toRem(30);
 		height: toRem(18);
 		z-index: 5;
+
 		@media (any-hover: none) {
 			cursor: default;
 		}
+
 		span,
 		&::before,
 		&::after {
@@ -69,26 +99,32 @@
 			height: toRem(2);
 			background-color: #000;
 		}
+
 		&::before {
 			top: 0;
 		}
+
 		&::after {
 			bottom: 0;
 		}
+
 		span {
 			top: calc(50% - toRem(1));
 		}
+
 		.menu-open & {
 			span {
 				width: 0;
 			}
+
 			&::before,
-			&::after {
-			}
+			&::after {}
+
 			&::before {
 				top: calc(50% - toRem(1));
 				transform: rotate(-45deg);
 			}
+
 			&::after {
 				bottom: calc(50% - toRem(1));
 				transform: rotate(45deg);
