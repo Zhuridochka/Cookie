@@ -15,7 +15,8 @@
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: $mainColor;
-			color: $whiteColor;
+			// color: $whiteColor;
+			color: $bgLightPink;
 		}
 	}
 

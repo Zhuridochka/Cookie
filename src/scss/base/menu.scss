@@ -57,18 +57,42 @@
 
 		@media (max-width: $mobile) {
 			flex-direction: column;
+			row-gap: toRem(25);
 		}
 	}
 
 	// .menu__item
-	&__item {}
+	&__item {
+		@media (any-hover: hover) {
+			&:hover {
+				.menu__link {
+					&::after {
+						inline-size: 100%;
+					}
+				}
+			}
+		}
+	}
 
 	// .menu__link
 	&__link {
+		position: relative;
 		font-size: toRem(20);
+		text-decoration: none;
 
 		@media (max-width: $mobile) {
-			font-size: toRem(24);
+			font-size: toRem(32);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset-block-end: 0%;
+			inset-inline-start: 0;
+			inline-size: 0%;
+			block-size: toRem(2);
+			background-color: #E093A0;
+			transition: inline-size 0.3s ease-out;
 		}
 	}
 }
