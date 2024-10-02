@@ -21,6 +21,18 @@
       font-weight: 400;
       text-transform: capitalize;
     }
+
+    @media (max-width:$mobile) {
+      font-size: toRem(40);
+    }
+
+    @media (max-width: toEm(580)) {
+      font-size: toRem(30);
+    }
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(27);
+    }
   }
 }
 
@@ -180,5 +192,33 @@
   &__text {
     line-height: 166.666667%;
     /* 30/18 */
+  }
+}
+
+//=== Presentation
+.presentation {
+  background-color: $mainColor;
+  inline-size: toRem(700);
+  padding-block: toRem(21);
+  padding-inline-start: toRem(150);
+  padding-inline-end: toRem(20);
+
+  position: relative;
+  z-index: 2;
+
+  @media (max-width:$mobile) {
+    inline-size: toRem(550);
+    padding-inline-start: toRem(100);
+  }
+
+  @media (max-width: toEm(580)) {
+    inline-size: toRem(450);
+    padding-inline-start: toRem(30);
+    padding-inline-end: toRem(10);
+  }
+
+  @media (max-width:$mobileSmall) {
+    inline-size: toRem(316);
+    padding-block: toRem(10);
   }
 }
