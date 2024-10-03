@@ -31,7 +31,12 @@ function windowLoaded() {
       const hero = document.querySelectorAll(".hero");
       const collection = document.querySelector(".collection");
 
-      presentation.style.top = `${-halfPresentationHeight}px`;
+      if (hero) {
+        presentation.style.top = `${-halfPresentationHeight}px`;
+      }
+      if (collection) {
+        presentation.style.top = `${-halfPresentationHeight}px`;
+      }
     });
   }
   updateHeightObjectPaddingBlock();
