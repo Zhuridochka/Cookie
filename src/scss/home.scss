@@ -6,6 +6,9 @@
 
   // .page__collection    
   &__collection {}
+
+  // .page__location  
+  &__location {}
 }
 
 //====================================================================================================
@@ -132,9 +135,12 @@
 
 //====================================================================================================
 .collection {
+  position: relative;
 
   // .collection__presentation
   &__presentation {
+    position: absolute;
+    inset-inline-start: 0;
     margin-block-end: toRem(47);
 
     @media (max-width:$mobileSmall) {
@@ -149,16 +155,19 @@
     padding-inline: toRem(15);
     display: flex;
     align-items: start;
-    column-gap: toRem(92);
-    margin-block-end: toRem(130);
+    padding-block-start: toRem(90);
+    padding-block-end: toRem(130);
+
     @include adaptiveValue("column-gap", 92, 10, 0, 1466, 1020);
 
     @media (max-width:$mobile) {
-      margin-block-end: toRem(100);
+      padding-block-end: toRem(100);
+      padding-block-start: toRem(70);
     }
 
     @media (max-width:$mobileSmall) {
-      margin-block-end: toRem(70);
+      padding-block-start: toRem(50);
+      padding-block-end: toRem(70);
     }
   }
 
@@ -166,6 +175,7 @@
   &__items {
     display: grid;
     grid-template-columns: 1.1187fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
     column-gap: toRem(92);
 
     @media (max-width:$tablet) {
@@ -183,7 +193,6 @@
 
   // .collection__item
   &__item {}
-
 }
 
 .item-collection {
@@ -300,7 +309,7 @@
     flex-shrink: 1;
     flex-grow: 0;
     aspect-ratio: 1;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
 
     // position: relative;
@@ -334,163 +343,62 @@
   }
 }
 
-//======================
-// .columns-left {
-//   display: grid;
-//   grid-template-rows: 1fr 1.306fr;
-//   grid-template-columns: auto;
-//   grid-auto-columns: auto;
+//====================================================================================================
+.location {
+  background: $bgLinierGradientStrongPink;
 
-//   // .columns-left__item
-//   &__item {
-//     flex-shrink: 1;
+  // .location__presentation
 
-//     &:nth-child(odd) {
-//       padding-block-start: toRem(95);
-//       padding-inline-start: toRem(92);
+  &__presentation {
+    margin-block-end: toRem(82);
 
-//       @media (max-width:$mobile) {
-//         padding-block-start: toRem(70);
-//         padding-inline-start: toRem(40);
-//       }
+    @media (max-width:$mobile) {
+      margin-block-end: toRem(40);
+    }
 
-//       @media (max-width: toEm(540)) {
-//         padding-inline-start: toRem(20);
-//       }
-//     }
-//   }
+    @media (max-width:$mobileSmall) {
+      margin-block-end: toRem(20);
+    }
+  }
 
-//   // .columns-left__name
-//   &__name {
-//     font-size: toRem(30);
-//     font-weight: 700;
-//     line-height: 120%;
+  // .location__container
 
-//     /* 36/30 */
-//     &:not(:last-child) {
-//       margin-block-end: toRem(27);
+  &__container {}
 
-//       @media (max-width:$mobile) {
-//         margin-block-end: toRem(18);
-//       }
-//     }
+  // .location__body
+  &__body {
+    margin: auto toRem(45);
+    padding-block-end: toRem(90);
 
-//     @media (max-width:$mobile) {
-//       font-size: toRem(25);
-//     }
-//   }
+    @media (max-width:$tablet) {
+      margin: auto toRem(25);
+    }
 
-//   // .columns-left__description
-//   &__description {
-//     font-family: 'Lena', serif;
-//   }
+    @media (max-width:$mobile) {
+      margin: auto toRem(20);
+    }
 
-//   // .columns-left__link
-//   &__link {
-//     inline-size: toRem(350);
-//     flex-basis: toRem(350);
-//     flex-shrink: 0;
-//     flex-grow: 0;
-//     aspect-ratio: 1;
-//     overflow: hidden;
+    @media (max-width:$mobileSmall) {
+      margin: auto 0;
+    }
+  }
 
-//     @media (max-width:$mobile) {
-//       position: relative;
-//       inset-block-start: 0;
-//       inset-inline-start: toRem(-80);
-//     }
+  // .location__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(40);
+    row-gap: toRem(30);
 
-//     @media (max-width: toEm(620)) {
-//       inline-size: toRem(250);
-//       flex-basis: toRem(250);
-//       flex-shrink: 1;
-//     }
-//   }
+    @media (max-width:$mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 
-//   // .columns-left__image  
-//   &__image {
-//     inline-size: 100%;
-//     object-fit: cover;
-//   }
-// }
+  // .location__item
 
-// .columns-right {
-//   display: grid;
-//   grid-template-rows: 1.306fr 1fr;
-//   grid-template-columns: auto;
-//   grid-auto-columns: auto;
-
-//   // .columns-right__item
-//   &__item {
-//     flex-shrink: 1;
-
-//     &:nth-child(even) {
-//       padding-block-start: toRem(50);
-
-//       @media (max-width: toEm(540)) {
-//         padding-inline-end: toRem(20);
-//       }
-//     }
-//   }
-
-//   // .columns-right__link
-//   &__link {
-//     inline-size: toRem(350);
-//     flex-basis: toRem(350);
-//     flex-shrink: 0;
-//     flex-grow: 0;
-//     aspect-ratio: 1;
-//     overflow: hidden;
-
-//     @media (max-width:$mobile) {
-//       position: relative;
-//       inset-block-start: 0;
-//       inset-inline-end: toRem(-80);
-//     }
-
-//     @media (max-width: toEm(620)) {
-//       inline-size: toRem(250);
-//       flex-basis: toRem(250);
-//     }
-
-//     @media (max-width: toEm(550)) {
-//       inset-inline-end: toRem(-60);
-//     }
-
-//     @media (max-width:$mobileSmall) {
-//       inline-size: toRem(180);
-//       flex-basis: toRem(180);
-//     }
-//   }
-
-//   // .columns-right__image  
-//   &__image {
-//     inline-size: 100%;
-//     object-fit: cover;
-//   }
-
-//   // .columns-right__name
-//   &__name {
-//     font-size: toRem(30);
-//     font-weight: 700;
-//     line-height: 120%;
-
-//     /* 36/30 */
-//     &:not(:last-child) {
-//       margin-block-end: toRem(27);
-
-//       @media (max-width:$mobile) {
-//         margin-block-end: toRem(18);
-//       }
-//     }
-
-//     @media (max-width:$mobile) {
-//       font-size: toRem(25);
-//     }
-//   }
-
-//   // .columns-right__description
-//   &__description {
-//     font-family: 'Lena', serif;
-//   }
-// }
+  &__item {
+    flex-basis: toRem(513);
+  }
+}

@@ -91,7 +91,7 @@
 			inset-inline-start: 0;
 			inline-size: 0%;
 			block-size: toRem(2);
-			background-color: #E093A0;
+			background-color: $mainColor;
 			transition: inline-size 0.3s ease-out;
 		}
 	}

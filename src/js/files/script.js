@@ -21,18 +21,18 @@ function windowLoaded() {
     const targetTag = targetElement.tagName;
   };
 
-  //* Функція для додавання від'ємного margin до блогу .presentation
+  //* Функція для додавання від'ємного margin до блоку .presentation
   function updateHeightObjectPaddingBlock() {
-    const presentation = document.querySelector(".presentation");
-    if (!presentation) return;
+    const presentations = document.querySelectorAll(".presentation");
+    presentations.forEach((presentation) => {
+      if (!presentation) return;
+      const presentationHeight = presentation.offsetHeight;
+      const halfPresentationHeight = presentationHeight / 2;
+      const hero = document.querySelectorAll(".hero");
+      const collection = document.querySelector(".collection");
 
-    const presentationHeight = presentation.offsetHeight;
-    const halfPresentationHeight = presentationHeight / 2;
-    const hero = document.querySelectorAll(".hero");
-
-    if (hero.length > 0) {
-      presentation.style.marginBlockStart = `${-halfPresentationHeight}px`;
-    }
+      presentation.style.top = `${-halfPresentationHeight}px`;
+    });
   }
   updateHeightObjectPaddingBlock();
 }
