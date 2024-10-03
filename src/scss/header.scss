@@ -1,12 +1,14 @@
 .header {
   position: absolute;
+  inline-size: 100%;
   z-index: 50;
   background-color: $whiteColor;
 
   &._header-scroll {
     position: fixed;
     inset-block-start: -200%;
-    background-color: $whiteColor;
+    // background-color: $whiteColor;
+    background: $bgLinierGradientStrongPink;
   }
 
   &._header-show {

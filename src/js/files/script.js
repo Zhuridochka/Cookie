@@ -40,4 +40,26 @@ function windowLoaded() {
     });
   }
   updateHeightObjectPaddingBlock();
+
+  // Визначення висоти Header
+  function updateHeaderHeight() {
+    const header = document.querySelector(".header");
+    if (!header) return;
+    const headerHeight = header.offsetHeight;
+    const allMainElements = document.querySelectorAll("main");
+
+    allMainElements.forEach((main) => {
+      main.style.paddingBlockStart = `${headerHeight}px`;
+    });
+  }
+  updateHeaderHeight();
+
+  //* Функція для зміни data-атрибуту data-scroll в Header
+  function updateDataAttributeBasedOnHeight() {
+    const header = document.querySelector(".header");
+    const headerHeight = header.offsetHeight;
+    if (!header) return;
+    header.setAttribute("data-scroll", headerHeight);
+  }
+  updateDataAttributeBasedOnHeight();
 }
