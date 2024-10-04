@@ -1,0 +1,99 @@
+//====================================================================================================
+.franchising {
+
+  // .franchising__main
+  &__main {}
+
+  // .franchising__work
+  &__work {}
+}
+
+//====================================================================================================
+.work {
+  background: $bgLinierGradientStrongPink;
+
+  // .work__presentation
+  &__presentation {}
+
+  // .work__container  
+  &__container {}
+
+  // .work__body
+  &__body {
+    padding-block-start: toRem(148);
+    padding-block-end: toRem(189);
+    padding-inline-start: toRem(110);
+    padding-inline-end: toRem(64);
+
+    @media (max-width:$tablet) {
+      padding-block-start: toRem(110);
+      padding-block-end: toRem(150);
+    }
+
+    @media (max-width:$mobile) {
+      padding-block-start: toRem(90);
+      padding-block-end: toRem(120);
+    }
+
+    @media (max-width: toEm(580)) {
+      padding-inline-start: toRem(70);
+      padding-inline-end: toRem(40);
+    }
+
+    @media (max-width:$mobileSmall) {
+      padding-inline-start: toRem(50);
+      padding-inline-end: toRem(20);
+      padding-block-start: toRem(70);
+      padding-block-end: toRem(80);
+    }
+
+    @media (max-width:$mobileSmall) {
+      padding-inline-end: 0;
+    }
+  }
+
+  // .work__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(85);
+    position: relative;
+
+    // border-left: toRem(4) solid $mainColor;
+    &::before {
+      content: '';
+      inline-size: toRem(4);
+      block-size: var(--before-height, 100px);
+      background-color: $mainColor;
+      position: absolute;
+      z-index: 2;
+      inset-block-start: toRem(32);
+      inset-inline-start: 0;
+
+      @media (max-width:$mobileSmall) {
+        inset-block-start: toRem(25);
+        inline-size: toRem(3);
+      }
+    }
+
+    @media (max-width:$tablet) {
+      row-gap: toRem(70);
+    }
+
+    @media (max-width:$mobile) {
+      row-gap: toRem(60);
+    }
+
+    @media (max-width: toEm(680)) {
+      row-gap: toRem(50);
+    }
+
+    @media (max-width:$mobileSmall) {
+      row-gap: toRem(30);
+
+    }
+  }
+
+  // .work__item
+  &__item {}
+}

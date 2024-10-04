@@ -57,8 +57,8 @@ function windowLoaded() {
   //* Функція для зміни data-атрибуту data-scroll в Header
   function updateDataAttributeBasedOnHeight() {
     const header = document.querySelector(".header");
-    const headerHeight = header.offsetHeight;
     if (!header) return;
+    const headerHeight = header.offsetHeight;
     header.setAttribute("data-scroll", headerHeight);
   }
   updateDataAttributeBasedOnHeight();
@@ -73,4 +73,22 @@ function windowLoaded() {
     imageBg.style.insetBlockEnd = `-${twentyPercentHeight}px`;
   }
   updateMainImage();
+
+  //* Функція для встановлення висоти псевдоелементу before
+  function updateHightBefore() {
+    const workItems = document.querySelector(".work__items");
+    const itemWork = document.querySelector(".item-work");
+
+    if (!workItems || !itemWork) return; // Перевірка, чи існують елементи
+
+    const workItemsHeight = workItems.offsetHeight;
+    const itemWorkHeight = itemWork.offsetHeight;
+
+    // Обчислюємо нову висоту для псевдоелемента :before
+    const newBeforeHeight = workItemsHeight - itemWorkHeight;
+
+    // Додаємо обчислену висоту як змінну CSS
+    workItems.style.setProperty("--before-height", `${newBeforeHeight}px`);
+  }
+  updateHightBefore();
 }
