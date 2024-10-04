@@ -63,7 +63,7 @@ function windowLoaded() {
   }
   updateDataAttributeBasedOnHeight();
 
-  //*Функція для зміни inset-block-end у зображення
+  //* Функція для зміни inset-block-end у зображення
   function updateMainImage() {
     const imageBg = document.querySelector(".top-main__image-bg");
     if (!imageBg) return;
