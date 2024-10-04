@@ -62,4 +62,15 @@ function windowLoaded() {
     header.setAttribute("data-scroll", headerHeight);
   }
   updateDataAttributeBasedOnHeight();
+
+  //*Функція для зміни inset-block-end у зображення
+  function updateMainImage() {
+    const imageBg = document.querySelector(".top-main__image-bg");
+    if (!imageBg) return;
+    const imageBgHeight = imageBg.offsetHeight;
+    const twentyPercentHeight = imageBgHeight * 0.2;
+
+    imageBg.style.insetBlockEnd = `-${twentyPercentHeight}px`;
+  }
+  updateMainImage();
 }

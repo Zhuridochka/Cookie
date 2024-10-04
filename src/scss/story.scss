@@ -66,21 +66,21 @@
     flex-shrink: 1;
     position: absolute;
     inset-inline-start: 0;
-    inset-block-end: -20%;
+    //inset-block-end: -20%;
     background-color: $bgPastelColor;
 
     @media (max-width:$mobile) {
       position: relative;
       inset-inline-start: toRem(10);
-      inset-block-end: toRem(-80);
+      //inset-block-end: toRem(-80);
     }
 
     @media (max-width:$mobileSmall) {
-      inset-block-end: toRem(-60);
+      //inset-block-end: toRem(-60);
     }
 
     @media (max-width: toEm(360)) {
-      inset-block-end: toRem(-40);
+      //inset-block-end: toRem(-40);
     }
   }
 
