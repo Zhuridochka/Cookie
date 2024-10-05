@@ -6,51 +6,75 @@
 	display: grid;
 	gap: 15px;
 }
+
 // Спойлер
 .spollers__item {
 	font-size: toRem(20);
 }
+
 // Заголовок спойлера
 .spollers__title {
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: toRem(10) toRem(15);
-	border-radius: toRem(5);
+	border-block-start: toRem(2) solid rgba(0, 0, 0, 0.3);
+	padding: toRem(16) toRem(15) toRem(18) toRem(21);
 	position: relative;
 	list-style: none;
+	font-size: toRem(25);
+	font-weight: 700;
+
+	@media (max-width:$mobile) {
+		font-size: toRem(24);
+		font-weight: 600;
+	}
+
+	@media (max-width:$mobileSmall) {
+		padding: toRem(15);
+	}
+
 	&::marker,
 	&::-webkit-details-marker {
 		display: none;
 	}
+
 	._spoller-init & {
 		cursor: pointer;
+
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
 			right: 10px;
 			top: 50%;
-			background-color: #000;
+			background-color: rgba(0, 0, 0, 0.797);
 			height: 2px;
-			width: 15px;
+			width: 12px;
 			transition: transform 0.5s ease 0s;
+
+			@media (max-width:$mobileSmall) {
+				width: 10px;
+			}
 		}
+
 		&::before {
 			transform: translate(-75%, -50%) rotate(40deg);
 		}
+
 		&::after {
 			transform: translate(0, -50%) rotate(-40deg);
 		}
+
 		&._spoller-active {
 			&::before {
 				transform: translateX(-75%) rotate(-40deg);
 			}
+
 			&::after {
 				transform: rotate(40deg);
 			}
 		}
+
 		/*
 		._spoller-init & {
 			position: relative;
@@ -86,9 +110,8 @@
 		*/
 	}
 }
+
 // Контент спойлера
 .spollers__body {
-	padding: toRem(20);
-	border-radius: toRem(5);
-	border: 1px solid #eee;
+	padding: toRem(15);
 }

@@ -3,6 +3,7 @@
 
 .button {
 	display: inline-flex;
+	justify-content: center;
 	padding: toRem(11) toRem(50);
 	border-radius: toRem(3);
 	border: toRem(1) solid #000;
@@ -13,8 +14,16 @@
 	transition: all 0.4s;
 	text-transform: capitalize;
 
+	@media (max-width:$mobileSmall) {
+		font-size: toRem(18);
+	}
+
 	span {
 		text-transform: lowercase;
+	}
+
+	b {
+		font-family: "Kollektif", sans-serif;
 	}
 
 	@media (any-hover: hover) {
@@ -22,6 +31,19 @@
 			background-color: $mainColor;
 			color: $bgLightPink;
 		}
+	}
+
+	// .button--big
+	&--big {
+		padding-block-end: toRem(7);
+		max-inline-size: toRem(592);
+		width: 100%;
+	}
+
+	&--middle {
+		padding-block-end: toRem(7);
+		max-inline-size: toRem(244);
+		width: 100%;
 	}
 
 	&--fw {

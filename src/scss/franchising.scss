@@ -6,6 +6,9 @@
 
   // .franchising__work
   &__work {}
+
+  // .franchising__apply    
+  &__apply {}
 }
 
 //====================================================================================================
@@ -90,10 +93,38 @@
 
     @media (max-width:$mobileSmall) {
       row-gap: toRem(30);
-
     }
   }
 
   // .work__item
   &__item {}
+}
+
+//====================================================================================================
+.apply {
+  background-color: $bgPastelColor;
+
+  // .apply__container
+  &__container {
+    padding-block-start: toRem(74);
+    padding-block-end: toRem(99);
+
+    @media (max-width:$mobile) {
+      padding-block-start: toRem(65);
+      padding-block-end: toRem(75);
+    }
+  }
+
+  // .apply__order-block
+  &__order-block {
+    max-inline-size: toRem(675);
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.button {
+
+  // .button--big
+  &--big {}
 }
