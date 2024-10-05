@@ -469,6 +469,7 @@
     /* 30/18 */
     max-inline-size: toRem(1206);
     padding-inline-start: toRem(77);
+    @include adaptiveValue("padding-inline-start", 77, 0, 0, 1466, 320);
 
     &:not(:last-child) {
       margin-block-end: toRem(40);
@@ -480,13 +481,13 @@
       }
     }
 
-    @media (max-width:$mobile) {
-      padding-inline-start: toRem(50);
-    }
-
     @media (max-width:$mobileSmall) {
       font-size: toRem(16);
-      padding-inline-start: toRem(30);
+      line-height: 140%;
+    }
+
+    &:not(:last-child) {
+      margin-block-end: toRem(20);
     }
   }
 
@@ -499,6 +500,12 @@
   padding-inline-start: toRem(77);
   line-height: 166.666667%;
   /* 30/18 */
+  @include adaptiveValue("padding-inline-start", 77, 15, 0, 1466, 320);
+
+  @media (max-width:$mobileSmall) {
+    font-size: toRem(16);
+    line-height: 140%;
+  }
 
   // .requirements-main__subtitle
   &__subtitle {
@@ -514,6 +521,12 @@
   &__text {
     &:not(:last-child) {
       margin-block-end: toRem(37);
+    }
+
+    @media (max-width:$mobileSmall) {
+      &:not(:last-child) {
+        margin-block-end: toRem(20);
+      }
     }
   }
 
