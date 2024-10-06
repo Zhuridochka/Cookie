@@ -27,12 +27,7 @@
 		font-family: "Kollektif", sans-serif;
 	}
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: $mainColor;
-			color: $bgLightPink;
-		}
-	}
+
 
 	// .button--big
 	&--big {
@@ -47,7 +42,29 @@
 		width: 100%;
 	}
 
+	// .button--sub		
+	&--sub {
+		background-color: $bgLightPink;
+		box-shadow: 0 toRem(4) toRem(8) 0 rgba(0, 0, 0, 0.15);
+		border: none;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $bgLightPink;
+				box-shadow: 0 toRem(8) toRem(15) 0 rgba(0, 0, 0, 0.30);
+			}
+		}
+	}
+
 	&--fw {
 		width: 100%;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $mainColor;
+			color: $bgLightPink;
+		}
 	}
 }

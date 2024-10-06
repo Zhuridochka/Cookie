@@ -28,6 +28,8 @@ $bgPastelColor: #ECDDCE; // Колір бекграунд пасетльний
 $bgLightPink: #F4D8DD; // Колір бекграунд рожевий
 $bgLinierGradientPink: linear-gradient(105deg, rgba(224, 147, 160, 0.46) -45.69%, #ECDDCE 120.92%);
 $bgLinierGradientStrongPink: linear-gradient(105deg, #E093A0 -45.69%, #ECDDCE 120.92%);
+$grayTextColor: #606060;
+$grayColor: #333;
 
 
 // Палітра кольорів
@@ -191,3 +193,4 @@ body {
 @import "franchising";
 @import "jobs";
 @import "catering";
+@import "contact";

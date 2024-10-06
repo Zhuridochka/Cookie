@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"ContactPage"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="contact">
+      <div class="contact__top top-contact">
+        <div class="top-contact__container">
+          <div class="top-contact__body">
+            <h1 class="top-contact__title title title--cnt">Contact <span>Cookie Couture</span></h1>
+            <div class="top-contact__text">
+              <p>
+                Ask for more information using this form. We will get in touch with you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact__container">
+        <form data-goto-error class="contact__form form-contact" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data">
+          <div class="form-contact__line">
+            <label class="form-contact__label" for="form_contact__options">Topic*</label>
+            <div required id="form_contact__options" class="form-contact__options options">
+              <div class="options__item">
+                <input id="o_1" class="options__input" checked type="radio" value="1" name="option">
+                <label for="o_1" class="options__label"><span class="options__text">Jobs</span></label>
+              </div>
+              <div class="options__item">
+                <input id="o_2" class="options__input" type="radio" value="2" name="option">
+                <label for="o_2" class="options__label"><span class="options__text">Franchise</span></label>
+              </div>
+              <div class="options__item">
+                <input id="o_3" class="options__input" type="radio" value="3" name="option">
+                <label for="o_3" class="options__label"><span class="options__text">Catering</span></label>
+              </div>
+              <div class="options__item">
+                <input id="o_4" class="options__input" type="radio" value="4" name="option">
+                <label for="o_4" class="options__label"><span class="options__text">Media & Press</span></label>
+              </div>
+              <div class="options__item">
+                <input id="o_5" class="options__input" type="radio" value="5" name="option">
+                <label for="o_5" class="options__label"><span class="options__text">Others</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-contact__line">
+            <label class="form-contact__label" for="name">Name*</label>
+            <input required autocomplete="off" type="text" name="form[name]" data-error="Помилка" placeholder="Your name" class="form-contact__input input" id="name">
+          </div>
+
+          <div class="form-contact__line">
+            <label class="form-contact__label" for="email">Email*</label>
+            <input data-required="email" required autocomplete="off" type="email" name="form[email]" data-error="Помилка" placeholder="Your email" class="form-contact__input input" id="email">
+          </div>
+
+          <div class="form-contact__line">
+            <label class="form-contact__label" for="phone">Phone*</label>
+            <input required autocomplete="off" type="tel" name="form[phone]" data-error="Помилка" placeholder="Your phone number" class="form-contact__input input" id="phone">
+          </div>
+
+          <div class="form-contact__line">
+            <label class="form-contact__label" for="message">Message*</label>
+            <textarea required class="form-contact__message input" name="message" id="message" placeholder="Your message"></textarea>
+          </div>
+
+          <div class="form-contact__checkbox checkbox">
+            <input required id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[data]">
+            <label for="c_1" class="checkbox__label"><span class="checkbox__text">By providing my data, I agree that cookie couture may contact me and I agree to the terms and conditions and privacy policy.*</span></label>
+          </div>
+
+          <div class="form-contact__captcha">
+            <img class="form-contact__image" src="@img/contact/image_captcha.png" alt="Image captcha">
+          </div>
+
+          <button type="submit" class="form-contact__button button button--sub">Submit</button>
+        </form>
+      </div>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

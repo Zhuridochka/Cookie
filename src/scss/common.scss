@@ -22,17 +22,7 @@
       text-transform: capitalize;
     }
 
-    @media (max-width:$mobile) {
-      font-size: toRem(40);
-    }
-
-    @media (max-width: toEm(580)) {
-      font-size: toRem(30);
-    }
-
-    @media (max-width:$mobileSmall) {
-      font-size: toRem(27);
-    }
+    @include adaptiveValue("font-size", 50, 27, 0, 1466, 360);
   }
 
   &--order {
@@ -54,6 +44,16 @@
 
     @include adaptiveValue("font-size", 50, 27, 0, 1466, 360);
   }
+
+  &--cnt {
+    span {
+      font-weight: normal;
+      text-transform: capitalize;
+    }
+
+    @include adaptiveValue("font-size", 50, 29, 0, 1466, 360);
+  }
+
 }
 
 //=== Item-location
