@@ -718,3 +718,87 @@
   // .order-block__button
   &__button {}
 }
+
+//=== Top-block
+.top-block {
+  background: $bgLinierGradientPink;
+
+  // .top-block__container
+  &__container {
+    padding-block: toRem(79);
+
+    @media (max-width:$mobile) {
+      padding-block: toRem(60);
+    }
+
+    @media (max-width:$mobileSmall) {
+      padding-block: toRem(50);
+    }
+  }
+
+  // .top-block__title
+  &__title {
+    text-align: center;
+    @include adaptiveValue("font-size", 50, 29, 0, 1466, 360);
+  }
+}
+
+//=== Content
+.content {
+
+  // .content__container
+  &__container {
+    margin: 0 toRem(72) 0 toRem(130);
+    padding-block-start: toRem(100);
+    padding-block-end: toRem(112);
+
+    @media (max-width: toEm(1024)) {
+      margin: 0 toRem(50) 0 toRem(100);
+    }
+
+    @media (max-width:$mobile) {
+      margin: 0 toRem(30) 0 toRem(60);
+      padding-block-start: toRem(60);
+      padding-block-end: toRem(80);
+    }
+
+    @media (max-width: toEm(630)) {
+      margin: 0 toRem(20) 0 toRem(30);
+      padding-block-start: toRem(60);
+      padding-block-end: toRem(80);
+    }
+
+    @media (max-width:$mobileSmall) {
+      margin: 0;
+      padding-block-start: toRem(30);
+      padding-block-end: toRem(50);
+    }
+  }
+
+  // .content__text
+  &__text {
+    line-height: 166.666667%;
+
+    /* 30/18 */
+    p {
+      &:not(:last-child) {
+        margin-block-end: toRem(34);
+      }
+    }
+
+    @media (max-width: toEm(630)) {
+      font-size: toRem(15);
+    }
+
+    @media (max-width:$mobileSmall) {
+      line-height: 140%;
+      font-size: toRem(16);
+
+      p {
+        &:not(:last-child) {
+          margin-block-end: toRem(20);
+        }
+      }
+    }
+  }
+}
