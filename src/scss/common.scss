@@ -86,9 +86,8 @@
     position: relative;
     overflow: hidden;
     aspect-ratio: 513 / 288;
-    background-color: $whiteColor;
-    flex-shrink: 1;
     flex-grow: 1;
+    background-color: $whiteColor;
 
     &:not(:last-child) {
       margin-block-end: toRem(37);
@@ -110,6 +109,7 @@
   // .item-location__image
   &__image {
     inline-size: 100%;
+    flex-grow: 1;
     object-fit: cover;
   }
 
