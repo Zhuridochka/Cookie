@@ -213,13 +213,25 @@
   &:nth-child(1n+5) {
     .item-collection__info {
       padding-inline-start: toRem(92);
+    }
+  }
 
-      @media (max-width:$mobile) {
+  @media (max-width:$mobile) {
+
+    &:nth-child(1),
+    &:nth-child(1n+5) {
+      .item-collection__info {
         padding-inline-start: toRem(50);
       }
+    }
+  }
 
-      @media (max-width: toEm(560)) {
-        padding-inline-start: 0;
+  @media (max-width: toEm(560)) {
+
+    &:nth-child(1),
+    &:nth-child(1n+5) {
+      .item-collection__info {
+        padding-inline-start: toRem(0);
       }
     }
   }
@@ -229,8 +241,6 @@
       padding-inline-start: toRem(0);
     }
   }
-
-
 
 
   &:nth-child(3n+2),
