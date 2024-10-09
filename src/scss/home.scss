@@ -312,12 +312,8 @@
     flex-shrink: 1;
     flex-grow: 0;
     aspect-ratio: 1;
-    // overflow: hidden;
     position: relative;
 
-    // position: relative;
-    // inset-block-end: -14%;
-    // inset-inline-start: 0;
     @media (max-width:$mobile) {
       inline-size: toRem(250);
       flex-basis: toRem(250);
