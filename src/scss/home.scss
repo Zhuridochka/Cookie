@@ -209,11 +209,29 @@
     }
   }
 
+  &:nth-child(1),
+  &:nth-child(1n+5) {
+    .item-collection__info {
+      padding-inline-start: toRem(92);
+
+      @media (max-width:$mobile) {
+        padding-inline-start: toRem(50);
+      }
+
+      @media (max-width: toEm(560)) {
+        padding-inline-start: 0;
+      }
+    }
+  }
+
   &:nth-child(4n) {
     .item-collection__info {
       padding-inline-start: toRem(0);
     }
   }
+
+
+
 
   &:nth-child(3n+2),
   &:nth-child(4n+4),
@@ -261,16 +279,14 @@
   // .item-collection__info
   &__info {
     padding-block-start: toRem(95);
-    padding-inline-start: toRem(92);
 
     @media (max-width:$mobile) {
-      padding-inline-start: toRem(50);
       padding-block-start: toRem(50);
     }
 
-    @media (max-width: toEm(560)) {
-      padding-inline-start: toRem(0);
-    }
+    // @media (max-width: toEm(560)) {
+    //   padding-inline-start: toRem(0);
+    // }
 
     @media (max-width: toEm(450)) {
       padding-block-start: toRem(25);
