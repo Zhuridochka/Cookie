@@ -59,6 +59,8 @@
 //=== Item-location
 .item-location {
   background-color: $bgPastelColor;
+  flex-basis: toRem(513);
+  flex-grow: 1;
 
   // .item-location__body
   &__body {
