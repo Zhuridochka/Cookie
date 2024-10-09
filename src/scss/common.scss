@@ -83,10 +83,10 @@
   &__link {
     position: relative;
     overflow: hidden;
-    inline-size: toRem(513);
     aspect-ratio: 513 / 288;
     background-color: $whiteColor;
     flex-shrink: 1;
+    flex-grow: 1;
 
     &:not(:last-child) {
       margin-block-end: toRem(37);

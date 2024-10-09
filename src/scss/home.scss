@@ -387,6 +387,7 @@
   // .location__items
   &__items {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     column-gap: toRem(40);
     row-gap: toRem(30);
@@ -395,12 +396,14 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+
+    @media (max-width:$mobileSmall) {
+      margin-inline: toRem(-10);
+    }
   }
 
   // .location__item
-  &__item {
-    flex-basis: toRem(513);
-  }
+  &__item {}
 }
 
 //====================================================================================================
