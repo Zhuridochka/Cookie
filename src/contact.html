@@ -23,8 +23,8 @@
       <div class="contact__container">
         <form data-goto-error class="contact__form form-contact" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data">
           <div class="form-contact__line">
-            <label class="form-contact__label" for="form_contact__options">Topic*</label>
-            <div required id="form_contact__options" class="form-contact__options options">
+            <legend class="form-contact__label">Topic*</legend>
+            <fieldset class="form-contact__options options">
               <div class="options__item">
                 <input id="o_1" class="options__input" checked type="radio" value="1" name="option">
                 <label for="o_1" class="options__label"><span class="options__text">Jobs</span></label>
@@ -45,7 +45,7 @@
                 <input id="o_5" class="options__input" type="radio" value="5" name="option">
                 <label for="o_5" class="options__label"><span class="options__text">Others</span></label>
               </div>
-            </div>
+            </fieldset>
           </div>
 
           <div class="form-contact__line">
