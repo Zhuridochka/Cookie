@@ -195,69 +195,70 @@
   }
 
   // .collection__item
-  &__item {}
+  &__item {
+    &:not(:last-child) {
+      margin-block-end: -14%;
+
+      @media (max-width:$mobile) {
+        margin-block-end: 0;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(1n+5) {
+      .item-collection__info {
+        padding-inline-start: toRem(92);
+      }
+    }
+
+    @media (max-width:$mobile) {
+
+      &:nth-child(1),
+      &:nth-child(1n+5) {
+        .item-collection__info {
+          padding-inline-start: toRem(50);
+        }
+      }
+    }
+
+    @media (max-width: toEm(560)) {
+
+      &:nth-child(1),
+      &:nth-child(1n+5) {
+        .item-collection__info {
+          padding-inline-start: toRem(0);
+        }
+      }
+    }
+
+    &:nth-child(4n) {
+      .item-collection__info {
+        padding-inline-start: toRem(0);
+      }
+    }
+
+    &:nth-child(3n+2),
+    &:nth-child(4n+4),
+    &:nth-child(1n+4) {
+      .item-collection__info {
+        padding-block-start: toRem(145);
+
+        @media (max-width:$mobile) {
+          padding-block-start: toRem(50);
+        }
+
+        @media (max-width: toEm(450)) {
+          padding-block-start: toRem(25);
+        }
+      }
+    }
+  }
 }
 
 .item-collection {
   max-block-size: toRem(350);
 
-  &:not(:last-child) {
-    margin-block-end: -14%;
 
-    @media (max-width:$mobile) {
-      margin-block-end: 0;
-    }
-  }
-
-  &:nth-child(1),
-  &:nth-child(1n+5) {
-    .item-collection__info {
-      padding-inline-start: toRem(92);
-    }
-  }
-
-  @media (max-width:$mobile) {
-
-    &:nth-child(1),
-    &:nth-child(1n+5) {
-      .item-collection__info {
-        padding-inline-start: toRem(50);
-      }
-    }
-  }
-
-  @media (max-width: toEm(560)) {
-
-    &:nth-child(1),
-    &:nth-child(1n+5) {
-      .item-collection__info {
-        padding-inline-start: toRem(0);
-      }
-    }
-  }
-
-  &:nth-child(4n) {
-    .item-collection__info {
-      padding-inline-start: toRem(0);
-    }
-  }
-
-
-  &:nth-child(3n+2),
-  &:nth-child(4n+4),
-  &:nth-child(1n+4) {
-    .item-collection__info {
-      padding-block-start: toRem(145);
-
-      @media (max-width:$mobile) {
-        padding-block-start: toRem(50);
-      }
-
-      @media (max-width: toEm(450)) {
-        padding-block-start: toRem(25);
-      }
-    }
-  }
 
   @media (max-width: toEm(560)) {
 
