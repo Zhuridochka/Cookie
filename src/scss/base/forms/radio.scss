@@ -8,14 +8,26 @@
 		row-gap: toRem(7);
 	}
 
+	// .options__name	
+	&__name {
+		font-weight: 700;
+		line-height: 166.666667%;
+
+		&:not(:last-child) {
+			margin-block-end: toRem(11);
+		}
+
+		/* 30/18 */
+		@media (max-width:$mobileSmall) {
+			font-size: toRem(16);
+			line-height: 140%;
+		}
+	}
+
 	// .options__item
 	&__item {
 		position: relative;
 		cursor: pointer;
-
-		// &:not(:last-child) {
-		// 	margin-bottom: em(5);
-		// }
 	}
 
 	// .options__input
