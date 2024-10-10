@@ -204,32 +204,57 @@
       }
     }
 
-    &:nth-child(1),
-    &:nth-child(1n+5) {
-      .item-collection__info {
-        padding-inline-start: toRem(92);
-      }
-    }
+    // &:nth-child(1),
+    // &:nth-child(1n+5) {
+    //   .item-collection__info {
+    //     padding-inline-start: toRem(92);
+    //   }
+    // }
 
-    @media (max-width:$mobile) {
+    // @media (max-width:$mobile) {
 
-      &:nth-child(1),
-      &:nth-child(1n+5) {
-        .item-collection__info {
-          padding-inline-start: toRem(50);
-        }
-      }
-    }
+    //   &:nth-child(1),
+    //   &:nth-child(1n+5) {
+    //     .item-collection__info {
+    //       padding-inline-start: toRem(50);
+    //     }
+    //   }
+    // }
+
+    // ===================================
 
     @media (max-width: toEm(560)) {
 
-      &:nth-child(1),
-      &:nth-child(1n+5) {
-        .item-collection__info {
-          padding-inline-start: toRem(0);
+      &:nth-child(2),
+      &:nth-child(4n+2) {
+        .item-collection__link {
+          position: relative;
+          inset-block-start: 0;
+          inset-inline-end: toRem(-70);
+
+          @media (max-width: toEm(375)) {
+            inset-inline-end: toRem(-50);
+          }
         }
       }
+
+      &:nth-child(3),
+      &:nth-child(4n+3) {
+        position: relative;
+        inset-block-start: 0;
+        inset-inline-start: toRem(-70);
+      }
     }
+
+    // @media (max-width: toEm(560)) {
+
+    //   &:nth-child(1),
+    //   &:nth-child(1n+5) {
+    //     .item-collection__info {
+    //       padding-inline-start: toRem(0);
+    //     }
+    //   }
+    // }
 
     &:nth-child(4n) {
       .item-collection__info {
@@ -252,40 +277,20 @@
         }
       }
     }
+
+    // =====================================
+    @media (max-width: toEm(375)) {
+
+      &:nth-child(3),
+      &:nth-child(4n+3) {
+        inset-inline-start: toRem(-50);
+      }
+    }
   }
 }
 
 .item-collection {
   max-block-size: toRem(350);
-
-
-
-  @media (max-width: toEm(560)) {
-
-    &:nth-child(2),
-    &:nth-child(4n+2) {
-      .item-collection__link {
-        position: relative;
-        inset-block-start: 0;
-        inset-inline-end: toRem(-70);
-
-        @media (max-width: toEm(375)) {
-          inset-inline-end: toRem(-50);
-        }
-      }
-    }
-
-    &:nth-child(3),
-    &:nth-child(4n+3) {
-      position: relative;
-      inset-block-start: 0;
-      inset-inline-start: toRem(-70);
-
-      @media (max-width: toEm(375)) {
-        inset-inline-start: toRem(-50);
-      }
-    }
-  }
 
   // .item-collection__info
   &__info {
@@ -294,10 +299,6 @@
     @media (max-width:$mobile) {
       padding-block-start: toRem(50);
     }
-
-    // @media (max-width: toEm(560)) {
-    //   padding-inline-start: toRem(0);
-    // }
 
     @media (max-width: toEm(450)) {
       padding-block-start: toRem(25);
